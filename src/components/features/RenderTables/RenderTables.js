@@ -11,7 +11,7 @@ const RenderTables = () => {
     <>
       <section>
         {tables.map(table => (
-          <div key={table.id} className='d-flex align-items-center border-bottom py-3'>
+          <div key={table.id} className='d-flex align-items-center border-bottom py-4'>
             <b><h3 className='m-0'>Table {table.id}</h3></b>
             <p className='m-0 mx-4'><b>Status: </b>{table.status}</p>
             <Button className='ms-auto' size='md' as={NavLink} to={'/table/' + table.id}>Show more</Button>
