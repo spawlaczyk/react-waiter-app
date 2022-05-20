@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const RenderTables = () => {
-  const [tables, setTables] = useState(null);
+  const [tables, setTables] = useState([]);
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
