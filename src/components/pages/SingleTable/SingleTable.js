@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SingleTableForm from "../../features/SingleTableForm/SingleTableForm";
+import { API_URL } from "../../../config";
 
 const SingleTable = () => {
   const { id } = useParams();
@@ -8,7 +9,7 @@ const SingleTable = () => {
   const [tableData , setTableData] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:3131/api/tables/${id}`)
+    fetch(`${API_URL}/tables/${id}`)
       .then(res => res.json())
       .then(tableData => {
         setTableData(tableData);

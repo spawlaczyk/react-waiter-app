@@ -1,13 +1,14 @@
 import { Button, Spinner } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { API_URL } from '../../../config';
 
 const RenderTables = () => {
   const [tables, setTables] = useState([]);
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3131/api/tables')
+    fetch(`${API_URL}/tables`)
       .then(res => res.json())
       .then(tables => {
         setTables(tables)

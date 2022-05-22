@@ -10,13 +10,6 @@ const EDIT_TABLE = createActionName('EDIT_TABLE');
 // action creators
 export const updateTables = payload => ({ type: UPDATE_TABLES, payload });
 export const editTable = payload => ({ type: EDIT_TABLE, payload });
-export const fetchTables = () => {
-  return(dispatch) => {
-    fetch('http://localhost:3131/api/tables')
-      .then(res => res.json())
-      .then(tables => dispatch(updateTables(tables)))
-  }
-}
 export const editTableRequest = tableData => {
   return(dispatch) => {
     const options = {

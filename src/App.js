@@ -4,16 +4,9 @@ import Home from './components/pages/Home/Home';
 import NotFound from './components/pages/NotFound/NotFound';
 import Header from './components/views/Header/Header';
 import Footer from './components/views/Footer/Footer';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchTables } from './redux/tablesRedux';
 import SingleTable from './components/pages/SingleTable/SingleTable';
 
-const App = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => dispatch(fetchTables()), [dispatch]);
-  
+const App = () => {  
   return (
     <Container>
       <Header />
